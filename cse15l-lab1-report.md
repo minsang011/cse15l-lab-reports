@@ -1,6 +1,5 @@
 Part 1: Installing VS Code
 ![image](part1.png)
-This part shows the installation of VS Code.
 
 Part 2: Remotedly Connecting
 ![image](part2.png)
@@ -15,8 +14,9 @@ Part 4: Moving Files With scp
 scp command allows user to upload or download file from local drive to the server. This even can enforce the power of online connection.
 
 Part 5: Setting an SSH Key
-![image](part5.png)
-Everytime when the user tries to login to the server, this is quite time consuming. Creating a ssh key does save the time for the user on logging in procedure. It saves about 15 sec, this seems not to long but gets larger as accumulated.
+![image](part5-1.png)
+![image](part5-2.png)
+Everytime when the user tries to login to the server, this is quite time consuming. Creating a ssh key does save the time for the user on logging in procedure. It saves about 15 sec, this seems not to long but gets larger as accumulated. First, we create the key that allows the user to access to the server without login procedure in the local drive. Following after, login to the server through ssh command, and we create a coresponding key in the server in order to match it with local key. After creating the local key,
 
 Part 6: Optimizing Remote Running
 ![image](part6.png)
