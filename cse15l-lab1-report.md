@@ -1,17 +1,18 @@
 Part 1: Installing VS Code
 ![image](part1.png)
+This part shows the installation of VS Code. Dive into VS Code website to download the launcher. https://code.visualstudio.com After downloading it, we can import the existing poject from the local computer, or we can craete a complete new project.
 
 Part 2: Remotedly Connecting
 ![image](part2.png)
-This part shows the connection to ieng6 server by using ssh command. ssh command allows user to be connected through online so that user can access to the files. The most of the things in screenshot are the same with what the peers did.
+This part shows the connection to ieng6 server by using ssh command. ssh command allows user to be connected through online so that user can access to the files. By putting ssh command at the front and writing ID and server after ssh, users can remotedly access to the files and projects that are uploaed on server.
 
 Part 3: Trying Some Commands
 ![image](part3.png)
-By utilizing some commands, I could know how they work. ls command shows the contents inside the current directory, and pwd command shows the path. Also, as this commands are so cmmon in the most of the case, I don't think copying and pasting them would not take that long.
+By utilizing some commands, I could know how they work. ls command shows the contents inside the current directory, and pwd command shows the path. Also, as this commands are so common in the most of the case, I don't think copying and pasting them would not take that long.
 
 Part 4: Moving Files With scp
 ![image](part4.png)
-scp command allows user to upload or download file from local drive to the server. This even can enforce the power of online connection.
+scp command allows user to upload or download file from local drive to the server. This even can enforce the power of online connection. Way to use scp command is like "scp 'file name' 'server'". In this case, WhereAmI.java would be the file name and what I try to upload on the server, and cs15lfa22ll@ieng6.ucsd.edu:~/ would be server where the file being uploaded.
 
 Part 5: Setting an SSH Key
 ![image](part5-1.png)
