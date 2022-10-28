@@ -72,7 +72,7 @@ Overall Summary:
 Part 2: Bugs And Symptoms
 ArrayTests:
 ![image](Part7.png)
-![image](Part3-1.png)
+![image](part7-1.png)
 
 - input that causes the bug.
 - test fails in testReverseInPlace3()
