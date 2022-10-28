@@ -71,7 +71,7 @@ Overall Summary:
 
 Part 2: Bugs And Symptoms
 ArrayTests:
-![image](Part3.png)
+![image](Part7.png)
 ![image](Part3-1.png)
 
 - input that causes the bug.
@@ -81,7 +81,7 @@ ArrayTests:
 - expected [4,3,2,1], actual [4,3,3,4]
 - while the expected result has a complete flipped version of input, actaul result provides the mirrored version of input.
   ![image](part2-fixedcode.png)
-- the bug occurs when the last half of the elements tries to overwrite it. Since last half of array take the values from the first half of array, the first half of the elements should not be manipulated. However, it is manipulated and produces the wrong output. To fix this, I implemented the swap algorithm.
+- This is fixed version of code. The bug occurs when the last half of the elements tries to overwrite it. Since last half of array take the values from the first half of array, the first half of the elements should not be manipulated. However, it is manipulated and produces the wrong output. To fix this, I implemented the swap algorithm.
 
 ListTests:
 ![image](part4.png)
