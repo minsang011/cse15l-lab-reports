@@ -58,16 +58,21 @@ class searchEngine {
 ```
 
 ![image](part1-1.png)
-![image](part1-2.png)
-![image](part1-3.png)
 
-- I used getPath and getQuery to extract the information from URL and other arraylist methods to utilize the information in arraylist. handleRequest method allows the user to access on URL directly. getQuery method gets the data after question mark, so if there is no question mark in URL, the website will display 404 Not Found!.
-- Parameter list contains two elements that are consisted of [s, (contents after '=')]. Contents after '=' comes from the user and will be stored in arraylist to be searched. The URL that contains /add will pul user input as a parameter[1], and /search will put what the user try to search as a parameter[1].
-- The values for parameter consistenly changing as URL gets changed. For instance, /add?s=apple will have a different parameter comparing to /search?s=app.
+- /add?s=apple is attached at the end of URL to add the 'apple' into the searchlist. getPath() method will extract URL in string data type. Since getQuery() method takes the part of URL after the question mark, 's = apple' will be returned as a result. From this string, split method splits the string into two parts by '=' sign and will store those splitted string in the list named parameters. From this parameter list,
+  ![image](part1-2.png)
+- /add?s=pineapple is used in this step to add pineapple into the searchlist. And the same procedure occurs to add pineapple.
+  ![image](part1-3.png)
+- For adding step, the code tries to determine whether /add is contained in URL or not, but for searching, it now tries to find /search in URL. If /search is contained, it does the same thing as adding step, using getQuery() and split by '='. Anything comes after the equal sign will be used for search. In this case, /search?s=app means any words that contain 'app' will be returned as the search result.
+
+Overall Summary:
+
+- I used getPath and getQuery to extract the information from URL and other arraylist methods to utilize the information in arraylist. handleRequest method allows the user to access on URL directly. getQuery method gets the data after question mark, so if there is no question mark in URL, the website will display 404 Not Found!. Parameter list contains two elements that are consisted of [s, (contents after '=')]. Contents after '=' comes from the user and will be stored in arraylist to be searched. The URL that contains /add will pul user input as a parameter[1], and /search will put what the user try to search as a parameter[1].
 
 Part 2: Bugs And Symptoms
 ArrayTests:
-![image](part2-1.png)
+![image](Part3.png)
+![image](Part3-1.png)
 
 - input that causes the bug.
 - test fails in testReverseInPlace3()
@@ -79,11 +84,13 @@ ArrayTests:
 - the bug occurs when the last half of the elements tries to overwrite it. Since last half of array take the values from the first half of array, the first half of the elements should not be manipulated. However, it is manipulated and produces the wrong output. To fix this, I implemented the swap algorithm.
 
 ListTests:
-![image](part2-2.png)
+![image](part4.png)
+![image](part4-1.png)
 
 - this photo provides the code that causes the error and output.
 - expected [a,x,y,z], actual Java heap space error
-  ![image](part2-fixedcode2.png)
+  ![image](part4-3.png)
+  ![image](part4-4.png)
 - the code that used to cause the error and fixed version of it. Previous: index1 += 1
   Fixed: index2 += 1
 - the bug occurs because while loop for list2 doesn't get ended since index1 is incremented. After changing index1 into index2, while loop now can break itself in order to not cause the memory error.
