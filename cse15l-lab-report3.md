@@ -1,51 +1,20 @@
 1. grep -i [string] [file name]
 
 - this command-line option, -i, displays the line that contains [string] in the file, regardless of lower or upper case.
+- this is useful when I'm trying to find a specific variable in the code. By putting variable name into string argument of command, we can see what line takes that variable.
 
-minsangkim@Min-Kims-MBP path-examples % grep -i "import" Read.java
-import java.util.Scanner;
-
-minsangkim@Min-Kims-MBP path-examples % grep -i "nest" some-files/even-more-files/a.txt
-nested file
-NESTED file
-NESting
-
-minsangkim@Min-Kims-MBP path-examples % grep -i "a" some-files/a.txt
-minsangkim@Min-Kims-MBP path-examples % grep -i "h" some-files/a.txt
-hello
+  ![image](-ipart.png)
 
 2. grep -v [string] [file name]
 
 - it used to display the lines which do not match with the given string.
+- it is useful to see the original code when I'm working on println() debugging. By putting System.out.print into the argument, we will be able to see the rest of the code that does not include System.out.print.
 
-minsangkim@Min-Kims-MBP path-examples % grep -v "import" Read.java
-
-class Read {
-public static void main(String[] args) {
-System.out.print("What's your name? ");
-Scanner in;
-in = new Scanner(System.in);
-String s = in.nextLine();
-System.out.println("Hello " + s);
-}
-}
-
-minsangkim@Min-Kims-MBP path-examples % grep -v "c" some-files/a.txt
-hello
-
-minsangkim@Min-Kims-MBP path-examples % grep -v "h" some-files/more-files/b.txt
-i don't know
-gege
+  ![image](-vpart.png)
 
 3. grep -c [string] [file name]
 
 - it counts the number of lines that contain the given string
+- it is useful in various areas, like to count the number of class in code, and number of indent the code contains. Also, it is useful to count the number of command used in bash file.
 
-minsangkim@Min-Kims-MBP path-examples % grep -c "a" Read.java
-6
-
-minsangkim@Min-Kims-MBP path-examples % grep -c "}" Read.java
-2
-
-minsangkim@Min-Kims-MBP path-examples % grep -c "h" some-files/even-more-files/a.txt
-1
+  ![image](-cpart.png)
