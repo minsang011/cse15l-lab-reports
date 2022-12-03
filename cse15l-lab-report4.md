@@ -6,10 +6,13 @@ Part 1: Vim 30 key strokes limitation
 
 ![image](1.png)
 Pressing /[ to move the cursor to where File[] is located.
+
 ![image](2.png)
 Press b twice to move the cursor backward so that I can move the cursor to the previous line of File[] line. After that, press i to enter Insert mode and <Enter> to make a new line.
+
 ![image](3.png)
 From this newly made line, type in System.out.print(w);, w is a variable that stores f.toString().
+
 ![image](4.png)
 Lastly, quit Insert mode by pressing <ESC> and type :wq to save and quit.
 
