@@ -4,6 +4,15 @@ Part 1: Vim 30 key strokes limitation
 
 /[bbi<Enter>System.out.print(w);<ESC>:wq
 
+![image](1.png)
+Pressing /[ to move the cursor to where File[] is located.
+![image](2.png)
+Press b twice to move the cursor backward so that I can move the cursor to the previous line of File[] line. After that, press i to enter Insert mode and <Enter> to make a new line.
+![image](3.png)
+From this newly made line, type in System.out.print(w);, w is a variable that stores f.toString().
+![image](4.png)
+Lastly, quit Insert mode by pressing <ESC> and type :wq to save and quit.
+
 - First, /[ will search File[] with the least number of key strokes since File[] is the first lane that uses []. Pressing b twice will move the cursor to the end of the previous line, and pressing i will allow user to edit the text by switching to insert mode. After getting into insert mode, <Enter> moves the cursor to the next new lane and now we type print statement. When I'm done with typing, <ESC> command quits to normal mode. Lastly, :wq will save the changes and quit.
 
 Part 2: Working on remote environment
